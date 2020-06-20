@@ -1,0 +1,40 @@
+$white: #fff !default;
+$dark: #343a40 !default; // $gray-dark
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.sidenav-bg-dark {
+  background-color: $dark;
+
+  .sidenav-footer {
+    color: $white;
+    opacity: 0.85;
+    a {
+      color: $white;
+      opacity: 0.85;
+      &:hover {
+        color: $white;
+        opacity: 1;
+      }
+    }
+  }
+}

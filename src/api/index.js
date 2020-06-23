@@ -12,6 +12,11 @@ export const getCategories = (setData) => {
   makeRequest(api_url, "get", setData);
 };
 
+export const editCategory = (params, setData) => {
+  let api_url = `${base_url}/category/`;
+  makeRequest(api_url, "put", setData, params);
+};
+
 export const makeRequest = async (url, type, setData, params = {}) => {
   setData(fetching);
   const response = await axios[type](url, params);

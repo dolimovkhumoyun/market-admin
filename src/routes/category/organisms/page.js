@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import CategoryTable from "../molecules/CategoryTable";
-import { getCategories } from "../../../api";
+import { getCategories, editCategory } from "../../../api";
 import CategoryModal from "../molecules/CategoryModal";
 
 const Page = () => {
+  const [response, setResponse] = useState();
   const [data, setData] = useState({ isFetching: true, data: [] });
   const [category, setCategory] = useState({});
 
@@ -20,9 +21,9 @@ const Page = () => {
 
   const onSubmit = (value) => {
     setModal(false);
-    console.log(value);
+    editCategory(value, setResponse);
   };
-
+  console.log(response);
   return (
     <>
       <CategoryTable data={data.data} loading={data.isFetching} onEditClick={onEditClick} />

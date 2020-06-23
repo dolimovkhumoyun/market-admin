@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Switch>
         <Route path="/app" component={AppLayout} />
-        <Route path="/" component={Login} />
+        <Route path="/login" component={Login} />
       </Switch>
     </>
   );
